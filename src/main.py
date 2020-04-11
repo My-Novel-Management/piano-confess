@@ -14,7 +14,7 @@ from config import PERSONS, AREAS, STAGES, DAYS, TIMES, ITEMS, WORDS, RUBIS, LAY
 ## assets
 from storybuilder.assets import basic, accessory
 ## local files
-from src.chapter.main import ch_tmp
+from src.chapter.main import ch_main
 
 ## define alias
 W = Writer
@@ -47,7 +47,7 @@ _ = Writer.getWho()
 def create_world():
     """Create a world.
     """
-    w = World("title")
+    w = World("あるピアノ弾きの懺悔")
     w.setCommonData()
     w.setAssets(basic.ASSET)
     w.setAssets(accessory.ASSET)
@@ -60,14 +60,14 @@ def create_world():
     # w.entryBlock()
     # w.entryHistory()
     # w.entryLifeNote()
-    w.setOutline("__outline__")
+    w.setOutline("ピアノ弾きの男は、後悔していた")
     return w
 
 
 def main(): # pragma: no cover
     w = create_world()
     return w.build(
-            ch_tmp(w),
+            ch_main(w),
             )
 
 

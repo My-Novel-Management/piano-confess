@@ -10,29 +10,25 @@ sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from storybuilder.builder.writer import Writer
 ## local files
-
+from src.chapter.e1_orphanage import ep_orphanage
+from src.chapter.e2_herdream import ep_herdream
+from src.chapter.e3_meetagain import ep_meetagain
+from src.chapter.e4_organ import ep_oldorgan
 
 ## define alias
 W = Writer
 _ = W.getWho()
 
-## scenes
-def sc_tmp(w: World):
-    return w.scene("Sc: xxx",
-            camera=w.taro,
-            area=w.Tokyo,
-            stage=w.on_street,
-            day=w.in_current, time=w.at_afternoon,
-            )
-
-## episode
-def ep_tmp(w: World):
-    return w.episode("Ep: xxx",
-            sc_tmp(w),
-            )
-
 ## chapter
-def ch_tmp(w: World):
-    return w.chapter("Ch: xxx",
-            ep_tmp(w),
-            )
+def ch_main(w: World):
+    return w.chapter("Ch: main",
+            ep_orphanage(w),
+            ep_herdream(w),
+            ep_meetagain(w),
+            ep_oldorgan(w),
+            ## NOTE
+            ##  - 孤児院の幼馴染と再会した男は、彼女が歌手を目指していると知る
+            ##  - 彼女の夢の為に身を引いて、自分は離れた
+            ##  - 彼女と場末のバーで再会し、そっと逃げ出す
+            ##  - 思い出の教会でオルガンを弾きながら、選択が正しかったのだと信じようとした
+            note="男は廃墟となった思い出の教会にやってきて、オルガンを弾く。自分の人生の選択が正しかったと信じたくて")
