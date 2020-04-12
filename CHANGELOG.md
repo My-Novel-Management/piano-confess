@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.0] - 2020-04-12
+### Added
+- production
+
 ## [0.1.0] - 2020-04-11
 ### Added
 - plot
@@ -18,4 +22,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 [Unreleased]: https://github.com/My-Novel-Management/piano-confess/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/My-Novel-Management/piano-confess/releases/v1.0.0
+[0.1.0]: https://github.com/My-Novel-Management/piano-confess/releases/v0.1.0
 [0.0.1]: https://github.com/My-Novel-Management/piano-confess/releases/v0.0.1
